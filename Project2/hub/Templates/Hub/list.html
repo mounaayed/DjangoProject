@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}  
+<p>welcome {{ user.username }}</p>
+{% endif %}
+{% if list_students %}
+
+
+<ul>
+    {%for student in list_students%}
+
+   <a href="{% url 'detail_student' student.id %}"><li> {{student.firstname}}</li></a>  
+   <a class="nav-link" href="{% url 'UpdateStudentView' student.id %}"> update</a>
+   <a class="nav-link" href="{% url 'StudentDeleteView' student.id %}"> delete</a>
+   <a class="nav-link" href="{% url 'deletestudent' student.id %}"> deleteeeeeeee</a>
+
+
+
+    {% endfor %}
+
+</ul>
+{% else %}
+<p>no student</p>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,32 @@
+
+{% load static %}
+<ul class="nav">
+  <li class="container-fluid">
+    <img class="navbar-brand" src="{% static 'téléchargement.png' %}" />
+    
+  </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'student_displayyyyyyyyy' %}">Student</a>
+    </li>
+ 
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'listprojet' %}">list project</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'projectsvirw' %}">list project view</a>
+    </li>
+
+    
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">logout</a>
+    </li>
+ <div>copyright {% now 'Y' %} esprit</div>
+  </ul>

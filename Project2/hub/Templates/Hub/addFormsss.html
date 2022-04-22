@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+
+    {% csrf_token %}
+
+    <!-- {{ form.as_p }} -->
+
+<ul>
+ <li>  <input type="text" name="firstname" placeholder="firstname"/></li>
+ <li>  <input type="text" name="lastname" placeholder="lastname"/></li>
+ <li>  <input type="text" name="email" placeholder="email"/></li>
+    
+
+    
+</ul>
+<input type="submit" value="save" />
+
+</form>
+
+
+{% endblock %}

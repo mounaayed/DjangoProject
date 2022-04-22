@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+<!-- table>(tr(td*5)) -->
+
+<table>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+
+{% block content %}
+object_list predefinie min listveiw
+<ul>
+    {%for projec in object_list%}
+
+     <li> {{projec.name}}</li>
+     <li> {{projec.creator}}</li>
+
+    {% endfor %}
+</ul>
+{% endblock content %}
+
